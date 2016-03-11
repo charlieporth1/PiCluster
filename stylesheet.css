@@ -178,8 +178,8 @@ h1 {
 .outer-menu .menu > div {
   width: 200vw;
   height: 200vw;
-  color: #FEFEFE;
-  background: rgba(41, 98, 0, 0.97);
+  color: #000000;
+  background: rgba(41, 98, 255, 0.97);
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
