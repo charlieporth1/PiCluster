@@ -2,7 +2,6 @@
 Menu bar from http://cssmenumaker.com/menu/flat-accented-dropdown-menu
 */
 @import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
-/* Starter CSS for Menu */
 #cssmenu {
   padding: 0;
   margin: 0;
@@ -20,7 +19,7 @@ Menu bar from http://cssmenumaker.com/menu/flat-accented-dropdown-menu
   z-index: 597;
 }
 #cssmenu ul li {
-  float: left;
+  float: right;
   min-height: 1px;
   vertical-align: middle;
 }
