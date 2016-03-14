@@ -1,271 +1,120 @@
-@import url('http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300');
-.flex-center {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+  background: #f96e5b;
+  width: auto;
 }
-* {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-a,
-a:visited,
-a:hover,
-a:active {
-  color: inherit;
-  text-decoration: none;
-}
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
-  font-size: 3em;
-  text-align: center;
-}
-.outer-menu {
-  position: fixed;
-  top: 10vh;
-  left: 0;
-  z-index: 1;
-}
-.outer-menu .checkbox-toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  opacity: 0;
-}
-.outer-menu .checkbox-toggle:checked + .hamburger > div {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-.outer-menu .checkbox-toggle:checked + .hamburger > div:before,
-.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-  opacity: 0;
-}
-.outer-menu .checkbox-toggle:checked ~ .menu {
-  pointer-events: auto;
-  visibility: visible;
-}
-.outer-menu .checkbox-toggle:checked ~ .menu > div {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-duration: .75s;
-          transition-duration: .75s;
-}
-.outer-menu .checkbox-toggle:checked ~ .menu > div > div {
-  opacity: 1;
-  -webkit-transition: opacity 0.4s ease 0.4s;
-  transition: opacity 0.4s ease 0.4s;
-}
-.outer-menu .checkbox-toggle:hover + .hamburger {
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-}
-.outer-menu .hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: .5em 1em;
-  background: rgba(33, 150, 243, 0.75);
-  border-radius: 0 0.12em 0.12em 0;
-  cursor: pointer;
-  -webkit-transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.outer-menu .hamburger > div {
-  position: relative;
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-  width: 100%;
-  height: 2px;
-  background: #FEFEFE;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.outer-menu .hamburger > div:before,
-.outer-menu .hamburger > div:after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: inherit;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.outer-menu .hamburger > div:after {
-  top: 10px;
-}
-.outer-menu .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  visibility: hidden;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  outline: 1px solid transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.outer-menu .menu > div {
-  width: 200vw;
-  height: 200vw;
-  color: #000000;
-  background: rgba(41, 98, 255, 0.97);
-  border-radius: 50%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.outer-menu .menu > div > div {
-  text-align: center;
-  max-width: 90vw;
-  max-height: 100vh;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
-  overflow-y: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.outer-menu .menu > div > div > ul {
+#cssmenu ul {
   list-style: none;
-  padding: 0 1em;
   margin: 0;
-  display: block;
-  max-height: 100vh;
-}
-.outer-menu .menu > div > div > ul > li {
   padding: 0;
-  margin: 1em;
-  font-size: 24px;
+  line-height: 1;
   display: block;
+  zoom: 1;
 }
-.outer-menu .menu > div > div > ul > li > a {
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
   position: relative;
-  display: inline;
-  cursor: pointer;
-  -webkit-transition: color 0.4s ease;
-  transition: color 0.4s ease;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
 }
-.outer-menu .menu > div > div > ul > li > a:hover {
-  color: #e5e5e5;
+#cssmenu ul li a:hover {
+  color: #333333;
 }
-.outer-menu .menu > div > div > ul > li > a:hover:after {
+#cssmenu ul li a:hover:before {
   width: 100%;
 }
-.outer-menu .menu > div > div > ul > li > a:after {
-  content: '';
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
   position: absolute;
-  z-index: 1;
-  bottom: -0.15em;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #e5e5e5;
-  -webkit-transition: width 0.4s ease;
-  transition: width 0.4s ease;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
 }
-
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #333333;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
