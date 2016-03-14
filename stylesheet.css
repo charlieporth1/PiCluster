@@ -45,7 +45,7 @@
   float: none;
 }
 #cssmenu.align-center ul ul {
-  text-align: left;
+  text-align: center;
 }
 #cssmenu.align-right > ul > li {
   float: right;
